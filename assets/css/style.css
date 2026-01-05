@@ -1,0 +1,155 @@
+body {
+  margin: 0;
+  font-family: Poppins, sans-serif;
+  background: #fdeff4;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 230px;
+  height: 100vh;
+  background: #ffffff;
+  position: fixed;
+  padding: 20px;
+  transition: 0.3s;
+}
+
+.sidebar.collapsed {
+  width: 80px;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: linear-gradient(135deg,#f06292,#f8a5c2);
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-text {
+  font-size: 22px;
+  font-weight: bold;
+  color: #f06292;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+}
+
+.sidebar-menu li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  color: #777;
+  cursor: pointer;
+}
+
+.sidebar-menu li i {
+  font-size: 18px;
+}
+
+.sidebar-menu li span,
+.sidebar-menu li a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 15px;
+}
+
+.sidebar-menu li.active,
+.sidebar-menu li:hover {
+  background: linear-gradient(135deg,#f06292,#f8a5c2);
+  color: white;
+}
+
+.sidebar.collapsed .logo-text,
+.sidebar.collapsed span,
+.sidebar.collapsed a {
+  display: none;
+}
+
+/* MAIN */
+.main {
+  margin-left: 250px;
+  padding: 25px;
+  transition: 0.3s;
+}
+
+.main.collapsed {
+  margin-left: 100px;
+}
+
+/* TOP BAR */
+.topbar {
+  background: white;
+  padding: 15px 20px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.toggle-btn {
+  background: #f06292;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* CARD */
+.card-pink {
+  background: linear-gradient(135deg,#f06292,#f8a5c2);
+  color: white;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(240,98,146,0.3);
+}
+
+.card-pink h3 {
+  font-size: 28px;
+}
+
+/* CHART */
+.chart-box {
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+}
+/* TOP BAR */
+.topbar {
+  background: white;
+  padding: 15px 20px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+  z-index: 1000;   /* 🔥 INI FIX UTAMA */
+}
+
+/* TOGGLE BUTTON */
+.toggle-btn {
+  background: #f06292;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 1001;   /* 🔥 PASTIKAN BOLEH CLICK */
+}
